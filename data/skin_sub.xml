@@ -1,0 +1,11 @@
+<skin>
+	<fonts>
+		<font filename="nmsbd2.ttf" name="subRegular" scale="100"/>
+	</fonts>
+	<subtitles>
+		<sub name="Subtitle_TTX" font="subRegular;45" foregroundColor="#fff68b" shadowColor="#40101010" shadowOffset="5,5" />
+		<sub name="Subtitle_Regular" font="subRegular;45" foregroundColor="#DCDCDC" shadowColor="#40101010" shadowOffset="5,5" />
+		<sub name="Subtitle_Bold" font="subRegular;45" foregroundColor="#DCDCDC" shadowColor="#40101010" shadowOffset="5,5" />
+		<sub name="Subtitle_Italic" font="subRegular;45" foregroundColor="#DCAAAA" shadowColor="#40101010" shadowOffset="5,5" />
+	</subtitles>
+</skin>

@@ -1,0 +1,21 @@
+SUBDIRS = include lib main data po tools
+
+ACLOCAL_AMFLAGS = -I m4
+
+installdir = $(pkglibdir)/python
+install_PYTHON = \
+	skin.py GlobalActions.py keyids.py keymapparser.py mytest.py Navigation.py NavigationInstance.py \
+	e2reactor.py RecordTimer.py ServiceReference.py SleepTimer.py timer.py \
+	tools.py 
+
+pkgconfigdir = $(libdir)/pkgconfig
+pkgconfig_DATA = enigma2.pc
+
+metadir = $(datadir)/meta
+meta_DATA = index-enigma2.xml
+CLEANFILES = index-enigma2.xml
+
+EXTRA_DIST = lamedb
+
+index-enigma2.xml: $(top_srcdir)/tools/genmetaindex.py $(top_srcdir)/lib/python/Plugins/*/*/meta/plugin_*.xml
+	$(AM_V_GEN)$(PYTHON) $^ > $@
